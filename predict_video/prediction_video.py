@@ -1,5 +1,5 @@
 import sys
-sys.path.append('/root/fall_detection/st-gcn')
+sys.path.append('/fall_detection/st-gcn')
 from net.st_gcn import Model
 import cv2
 import torch
@@ -69,20 +69,21 @@ def process_video_with_text(input_video_path, output_video_path, dataloader, mod
     out.release()
 
 
-data = np.load('/root/fall_detection/dataset/saved_npy/falling_mediapipe_30fps.npy')
+data = np.load('npy_path')
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
+#st-gcn
 model = Model(in_channels=3, num_class=2, edge_importance_weighting=True,
               graph_args={'layout': 'openpose', 'strategy': 'uniform'})
-model.load_state_dict(torch.load('/root/fall_detection/st-gcn/work_dir/shuffle_combined_model_f_mediapipe/epoch200_model.pt', map_location=device))
+model.load_state_dict(torch.load('model_path', map_location=device))
 model.eval().to(device)
 
 dataset = PoseDataset(data, device)
 dataloader = DataLoader(dataset, batch_size=1, shuffle=False)
 
-#input_video_path = '/root/fall_detection/data/falling_video/falling_original_30fps.mp4'
-OPENPOSE_BIN = '/root/fall_detection/openpose/bin/openpose.bin'
+#input_video_path = 'falling_original_30fps.mp4'
+OPENPOSE_BIN = '/fall_detection/openpose/bin/openpose.bin'
 
 cmd = [
     OPENPOSE_BIN,
@@ -97,7 +98,7 @@ cmd = [
 subprocess.run(cmd)
 
 
-input_video_path = '/root/fall_detection/data/falling_video/falling_original_30fps.mp4_mediapipe.mp4'
-output_video_path = '/root/fall_detection/saved_video/skeleton_video/falling_mediapipe.mp4'
+input_video_path = 'video_path'
+output_video_path = 'video_path'
 
 process_video_with_text(input_video_path, output_video_path, dataloader, model, device)
