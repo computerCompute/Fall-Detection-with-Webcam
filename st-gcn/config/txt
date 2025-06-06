@@ -1,1 +1,2 @@
-
+model_train cmd:
+python3 main.py recognition --config config/custom_config.yaml
