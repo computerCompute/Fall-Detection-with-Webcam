@@ -9,16 +9,16 @@ import pickle
 
 
 # 데이터 및 라벨 로드
-data = np.load('/root/fall_detection/dataset/saved_pkl/combined_mediapipe_30fps.npy')
+data = np.load('npy_path')
 print(f"{data.shape}")
-with open('/root/fall_detection/dataset/saved_pkl/combined_mediapipe_30fps_labels.pkl', 'rb') as f:
+with open('pkl_path', 'rb') as f:
     sample_names, class_labels = pickle.load(f)
 
-# 모델 로드
+# 모델 로드 (st-gcn)
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 model = Model(in_channels=3, num_class=2, edge_importance_weighting=True,
               graph_args={'layout': 'openpose', 'strategy': 'uniform'})
-model.load_state_dict(torch.load('/root/fall_detection/st-gcn/work_dir/shuffle_combined_model_f_mediapipe/epoch200_model.pt', map_location=device))
+model.load_state_dict(torch.load('model_path', map_location=device))
 model.eval().to(device)
 
 # 클래스 이름 정의
