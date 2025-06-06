@@ -3,9 +3,9 @@ import numpy as np
 import mediapipe as mp
 import os
 # 상수 정의
-VIDEO_PATH = "/root/install_openpose/openpose/data/origin/wasabari30.mp4"
-OUTPUT_PATH = "/root/install_stgcn/st-gcn/pkl/wasabari30_mediapipe.npy"
-#OUTPUT_PATH = "/root/install_stgcn/st-gcn/pkl/originfalling_mediapipe.npy"
+VIDEO_PATH = "path"
+OUTPUT_PATH = "npy_path"
+
 FRAME_RATE = 30
 CHANNELS = 3  # x, y, confidence
 NUM_KEYPOINTS = 18
@@ -36,7 +36,7 @@ while True:
         print("video 인식 실패")
         break
     frames.append(frame)
-print(f"총 프레임 수: {len(frames)}")  # ← 0이면 영상 경로 문제 또는 비디오 오류
+print(f"총 프레임 수: {len(frames)}") 
 cap.release()
 
 T = len(frames)
@@ -60,6 +60,7 @@ for t, frame in enumerate(frames):
     img_h, img_w = frame.shape[:2]
 
     for k, idx in enumerate(COCO_ORDERED_LANDMARKS):
+        #skeleton  보간
         if idx is None:
             l = results.pose_landmarks.landmark[11]
             r = results.pose_landmarks.landmark[12]
