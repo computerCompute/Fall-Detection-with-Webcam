@@ -9,7 +9,7 @@ VIDEO_DIRECTORIES = [
     "path1","path2"
 ]
 
-OUTPUT_BASE_PATH = "path"
+OUTPUT_BASE_PATH = "combined_falling"
 FRAME_RATE = 30
 CHANNELS = 3
 NUM_KEYPOINTS = 18
