@@ -4,7 +4,7 @@ import mediapipe as mp
 import os
 # 상수 정의
 VIDEO_PATH = "path"
-OUTPUT_PATH = "npy_path"
+OUTPUT_PATH = "falling_orignal_npy"
 
 FRAME_RATE = 30
 CHANNELS = 3  # x, y, confidence
