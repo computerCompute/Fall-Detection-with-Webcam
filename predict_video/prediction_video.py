@@ -85,6 +85,8 @@ dataloader = DataLoader(dataset, batch_size=1, shuffle=False)
 #input_video_path = 'falling_original_30fps.mp4'
 OPENPOSE_BIN = '/fall_detection/openpose/bin/openpose.bin'
 
+
+#openpose - coco model을 이용한 skeleton video 생성
 cmd = [
     OPENPOSE_BIN,
     '--video', '/root/fall_detection/data/falling_video/falling_original_30fps.mp4',
