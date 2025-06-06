@@ -6,11 +6,10 @@ import mediapipe as mp
 from tqdm import tqdm
 
 VIDEO_DIRECTORIES = [
-    "/root/fall_detection/data/falling_video/falling_30fps",
-    "/root/fall_detection/data/normal_video/f_normal_30fps"
+    "path1","path2"
 ]
 
-OUTPUT_BASE_PATH = "/root/fall_detection/dataset/saved_pkl"
+OUTPUT_BASE_PATH = "path"
 FRAME_RATE = 30
 CHANNELS = 3
 NUM_KEYPOINTS = 18
@@ -96,8 +95,8 @@ def process_dir(input_dir, label_value):
     return sample_names, all_data, all_labels
 
 
-abnormal_dir = "/root/fall_detection/data/falling_video/falling_30fps"
-normal_dir = "/root/fall_detection/data/normal_video/f_normal_30fps"
+abnormal_dir = "path"
+normal_dir = "path"
 
 ab_names, ab_data, ab_labels = process_dir(abnormal_dir, 1)
 nm_names, nm_data, nm_labels = process_dir(normal_dir, 0)
@@ -108,8 +107,8 @@ label_list = ab_labels + nm_labels
 
 data_numpy = np.stack(data_list)
 
-output_data_path = os.path.join(OUTPUT_BASE_PATH, "combined_mediapipe_30fps.npy")
-output_label_path = os.path.join(OUTPUT_BASE_PATH, "combined_mediapipe_30fps_labels.pkl")
+output_data_path = os.path.join(OUTPUT_BASE_PATH, "npy_path")
+output_label_path = os.path.join(OUTPUT_BASE_PATH, "pkl_path")
 
 os.makedirs(os.path.dirname(output_data_path), exist_ok=True)
 np.save(output_data_path, data_numpy)
