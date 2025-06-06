@@ -20,11 +20,11 @@ base_lr: 0.1
 feeder: feeder.feeder.Feeder
 
 train_feeder_args:
-  data_path: /root/fall_detection/dataset/saved_pkl/shuffled_combined_mediapipe_30fps.npy
-  label_path: /root/fall_detection/dataset/saved_pkl/shuffled_combined_mediapipe_30fps_labels.pkl
+  data_path: path.npy
+  label_path: path.pkl
 test_feeder_args:
-  data_path: /root/fall_detection/dataset/saved_pkl/combined_mediapipe_30fps.npy
-  label_path: /root/fall_detection/dataset/saved_pkl/combined_mediapipe_30fps_labels.pkl
+  data_path: path.npy
+  label_path: path.pkl
 
 
 
