@@ -13,7 +13,7 @@ project
 │   ├──config:custom yaml
 │   ├──model:학습 모델
 │   ├──net:stgcn.py
-│── webcam : 웹캠 실시간 낙상 추론 코드(skeleton 시각화)
+│── webcam : 웹캠 실시간 낙상추론 코드(skeleton 시각화)
 </pre>
 
 ## 1. 초기 세팅 
