@@ -17,13 +17,13 @@ project
 </pre>
 
 ## 1. 초기 세팅 
-### 모델 학습시에는 GPU 가상 서버에서 구동하는것을 권장합니다
+### 모델 학습시에는 GPU 가상 서버에서 구동하는 것을 권장합니다
 ### 실행 경로는 사용자 환경에 맞게 수정해야 합니다
 - ST-GCN 다운로드 및 초기 설정
-- 방법 : git clone https://github.com/open-mmlab/st-gcn.git
+- 방법 : 'git clone https://github.com/open-mmlab/st-gcn.git'
 
 ## 2. 학습 데이터 다운로드
-### AI-HUB 사이트에서 타 낙상 video 다운 가능
+### AI-HUB 사이트에서 낙상 영상 다운로드 가능
 - make_clip.py를 활용해 NORMAL/FALL로 분류
 
 ## 3. 데이터 전처리 시행 
@@ -37,7 +37,7 @@ project
 
 ## 4. 모델 훈련 및 추론 수행
 ### STGCN 초기 설정 후 수행 할 것 
-- 모델 학습 및 추론 정확도 검증 타 추론 영상 생성시 3-3 코드 활용할 것
+- 모델 학습과 추론 정확도 검증 후, 타 영상에 대한 추론 결과를 생성할 경우 3-3 코드를 활용하세요
 - 방법:
      1. custom_config.yaml 생성 
      2. st-gcn 루트 경로에서 cmd 명령어 실행
@@ -46,7 +46,7 @@ project
     
 ## 5. 웹캠을 활용한 실시간 추론
 ### 로컬에서 수행시 깃허브 st-gcn 디렉토리 다운로드 후 실행할 것
--Flask 서버 활용한 실시간 스트리밍  
+- Flask 서버를 활용한 실시간 스트리밍  
 - 방법:
      1. 가상서버 혹은 저장된 모델 다운로드
      2. cam_server.py 실행
