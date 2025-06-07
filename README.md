@@ -49,7 +49,7 @@ project
 ### 실시간 추론 스트리밍을 로컬에서 실행하려면, GitHub에 있는 `/fall_detection/st-gcn` 디렉토리 다운로드하여 실행해야 합니다
 - Flask 서버를 활용한 실시간 스트리밍  
 - 방법:
-     1. 가상서버 혹은 저장된 모델 다운로드
+     1. 가상서버 혹은 trained 모델 다운로드
      2. cam_server.py 실행
      3. 브라우저에서 아래 주소로 접속해 실시간 추론 확인 (http://localhost:####/video)
 
