@@ -80,7 +80,7 @@ model.load_state_dict(torch.load('model_path', map_location=device))
 model.eval().to(device)
 
 dataset = PoseDataset(data, device)
-dataloader = DataLoader(dataset, batch_size=1, shuffle=False)
+dataloader = DataLoader(dataset, batch_size=32, shuffle=False)
 
 #input_video_path = 'falling_original_30fps.mp4'
 OPENPOSE_BIN = '/fall_detection/openpose/bin/openpose.bin'
