@@ -23,7 +23,7 @@ project
 - 방법 : git clone https://github.com/open-mmlab/st-gcn.git
 
 ## 2. 학습 데이터 다운로드
-### AI-HUB 사이트에서 다른 낙상 데이터 다운 가능
+### AI-HUB 사이트에서 타 낙상 video 다운 가능
 - 낙상 데이터 다운로드, 타 낙상 데이터 사용시 make_clip.py 활용한 원본영상 NORAML,FALL분류 (30FPS 권장)
 
 ## 3. 데이터 전처리 시행 
