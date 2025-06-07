@@ -36,7 +36,7 @@ project
      3. convert_pkl_origin_mediapipe.py 실행
 
 ## 4. 모델 훈련 및 추론 수행
-### STGCN 설치 및 초기 설정 후 수행할 것
+### STGCN 초기 설정 후 수행할 것 가
 -모델 학습 및 추론 정확도 검증 타 추론 영상 생성시 3-3 코드 활용할 것
 -방법:
     1. custom yaml 생성 
