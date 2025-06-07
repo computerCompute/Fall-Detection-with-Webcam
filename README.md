@@ -1,4 +1,4 @@
-# FALL_DETECTION (실시간 낙상 추론)
+# FALL_DETECTION (웹캠 추론 추가)
 
 ## 0. 폴더 설명
 <pre>
