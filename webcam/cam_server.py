@@ -16,7 +16,7 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 model = Model(in_channels=3, num_class=2, edge_importance_weighting=True,
               graph_args={'layout': 'openpose', 'strategy': 'uniform'})
-model.load_state_dict(torch.load('/Users/cha/Downloads/webcam/epoch200_model.pt', map_location=device))
+model.load_state_dict(torch.load('epoch200_model.pt', map_location=device))
 model.eval().to(device)
 
 class_names = ['Normal', 'Fall']
