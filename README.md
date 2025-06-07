@@ -50,5 +50,5 @@ project
 - 방법:
      1. 가상서버 혹은 저장된 모델 다운로드
      2. cam_server.py 실행
-     3. 브라우저에서 아래 주소로 접속해 실시간 추론 확인 (http://localhost:5050/video)
+     3. 브라우저에서 아래 주소로 접속해 실시간 추론 확인 (http://localhost:####/video)
 
