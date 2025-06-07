@@ -37,7 +37,7 @@ project
      3. convert_pkl_origin_mediapipe.py 실행
 
 ## 4. 모델 훈련 및 추론 수행
-### STGCN 초기 설정 후 수행 할 것 
+### STGCN 초기 설정 후 실행 할 것 
 - 모델 학습과 추론 정확도 검증 후, 타 영상에 대한 추론 결과를 생성할 경우 3-3 코드를 활용하세요
 - 방법:
      1. custom_config.yaml 생성 
@@ -46,7 +46,7 @@ project
      4. prediction_video.py 실행
     
 ## 5. 웹캠을 활용한 실시간 추론
-### 실시간 추론 스트리밍을 로컬에서 실행하려면, GitHub에 있는 `/fall_detection/st-gcn` 디렉토리만 다운로드하여 실행하면 됩니다.
+### 실시간 추론 스트리밍을 로컬에서 실행하려면, GitHub에 있는 `/fall_detection/st-gcn` 디렉토리 다운로드하여 실행해야 합니다
 - Flask 서버를 활용한 실시간 스트리밍  
 - 방법:
      1. 가상서버 혹은 저장된 모델 다운로드
