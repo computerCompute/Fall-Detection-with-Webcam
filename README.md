@@ -1,4 +1,4 @@
-# FALL_DETECTION Using a Webcam (실시간 낙상 추론)
+# FALL_DETECTION (실시간 낙상 추론)
 
 ## 0. 폴더 설명
 <pre>
