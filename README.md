@@ -1,4 +1,4 @@
-# FALL_DETECTION (웹캠 추론 추가)
+# FALL_DETECTION (웹캠 스트리밍 추가)
 
 ## 0. 폴더 설명
 <pre>
