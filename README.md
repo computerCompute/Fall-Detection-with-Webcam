@@ -28,7 +28,7 @@ project
 - make_clip.py를 활용해 NORMAL/FALL로 분류
 
 ## 3. 데이터 전처리 시행 
-- 학습용 .pkl 파일 및 원본 영상의 NumPy 파일 생성
+- 학습용 .pkl 파일 및 추론용 .npy 파일 생성
 - shuffle.py 결과는 검증 데이터로 사용됨
 - COCO 모델 기준 관절 수에 맞추기 위해 일부 관절은 보간 처리
 - 방법:
